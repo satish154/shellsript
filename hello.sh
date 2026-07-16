@@ -6,4 +6,4 @@ echo " just  say hello"
 x=ramesh
 y=satish
 echo "$x : hello $y"
-echo "$y: hey heii $x"
+echo "$y: hey heilo $x"
