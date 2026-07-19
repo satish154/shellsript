@@ -8,3 +8,4 @@ if [ $? -ne 0 ]; then
     echo " error : installing nginx is failed "
 else
     echo " succesfully installed "
+fi
