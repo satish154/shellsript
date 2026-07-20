@@ -11,3 +11,11 @@ if [ $? -ne 0 ]; then
 else
     echo " succesfully installed "
 fi
+
+dnf install mongodb-mongosh -y
+if [ $? -ne 0 ]; then 
+    echo " error : installing mongod is failed "
+    exit 1
+else
+    echo " succesfully installed "
+fi
