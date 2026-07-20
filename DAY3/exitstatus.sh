@@ -12,7 +12,7 @@ else
     echo " succesfully installed "
 fi
 
-dnf install mongodb-mongosh -y
+dnf install mysql -y
 if [ $? -ne 0 ]; then 
     echo " error : installing mongod is failed "
     exit 1
