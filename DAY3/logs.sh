@@ -9,17 +9,17 @@ N="\e[0m"
 
 LOG_FOLDER="/var/log/shell-script"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 mkdir -p LOG_FOLDER
 echo "script started executed at $(date)" | tree -a $LOG_FILE
 
-if [ $USERID -ne 0 ]; then
+if [ "$USERID" -ne 0 ]; then
     echo -e "${R}Error: Run this script with root privileges ${N}"
     exit 1
 fi
 
 validate() {
-    if [ $1 -ne 0 ]; then
+    if [ "$1" -ne 0 ]; then
         echo -e "${R}Error: Installing $2 failed${N}" | tree -a $LOG_FILE
         exit 1
     else
