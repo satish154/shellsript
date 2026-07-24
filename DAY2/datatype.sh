@@ -9,3 +9,5 @@ echo "sume is : ${SUM}"
 LEADERS=("satish" "kumar" "Thota")
 echo "one leader: ${LEADERS[@]}"
 echo "one leader: ${LEADERS[1]}"
+echo "one leader: ${LEADERS[2]}"
+
