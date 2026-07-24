@@ -30,7 +30,7 @@ validate() {
 # Check MySQL
 dnf list installed mysql &>>$LOG_FILE
 if [ $? -ne 0 ]; then
-    dnf install mysql -y $>>$LOG_FILE
+    dnf install mysql -y &>>$LOG_FILE
     validate $? "mysql"
 else
     echo -e "mysql already exists.........${Y}Skipping${N}" 
@@ -38,9 +38,9 @@ fi
 
 # Check Nginx
 
-dnf list installed nginx $>>$LOG_FILE
+dnf list installed nginx &>>$LOG_FILE
 if [ $? -ne 0 ]; then
-    dnf install nginx -y $>>$LOG_FILE
+    dnf install nginx -y &>>$LOG_FILE 
     validate $? "nginx"
 else
     echo -e "nginx already exists.........${Y}Skipping${N}" | tee -a $LOG_FILE
